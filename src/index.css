@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { min-height: 100%; }
+body { @apply bg-cdl-brume text-cdl-encre antialiased; }
+:focus-visible { outline: 3px solid #5AC2EC; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+@layer components {
+  .btn-primaire { @apply inline-flex items-center justify-center rounded-xl bg-cdl-tealfonce px-5 py-3 font-semibold text-white transition hover:bg-[#1d5f58] disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-secondaire { @apply inline-flex items-center justify-center rounded-xl border border-cdl-ligne bg-white px-5 py-3 font-medium text-cdl-encre transition hover:border-cdl-gris; }
+  .champ { @apply w-full rounded-xl border border-cdl-ligne bg-white px-4 py-3 text-base outline-none focus:border-cdl-teal focus:ring-2 focus:ring-cdl-teal/30; }
+  .carte { @apply rounded-2xl border border-cdl-ligne bg-white p-5; }
+}
